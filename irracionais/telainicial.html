@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projeto1.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="Icon/brasão 32x².png" type="image/x-icon">
     <title>Irracionais F.C. | Site Official</title>
 </head>
@@ -13,7 +14,7 @@
     <header>
         <!--menu-->
         <nav class="menu">
-            <a href="#" class="logo"><img src="Icon/brasão 64x².png" alt=""></a>
+            <a href="" class="logo"><img src="Icon/brasão 64x².png" alt=""></a>
             <ul>
                 <li><a href="" class="news">Noticias</a></li>
                 <li><a href="" class="plays">Jogos</a></li>
@@ -21,16 +22,67 @@
                 <li><a href="" class="School">Escola</a></li>
                 <li><a href="" class="Shop">Loja</a></li>
                 <li><a href="" class="contato">Contato</a></li>
+                 <button onclick="document.getElementById('id01').style.display='inline-block'" style="width:auto;">Login</button>
+
+    <div id="id01" class="modal">
+  
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="fotomanha.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+        <label for="uname"><b>Nome de Usuário</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Senha</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        
+        <button type="submit">Login</button>
+        <label>
+            <input type="checkbox" checked="checked" name="remember"> Lembre-me
+        </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+        <span class="psw">Esqueceu <a href="#">sua senha?</a></span>
+        </div>
+    </form>
+    </div>
             </ul>
         </nav>
+   
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
     </header>
+    <!--menu-->
+    <!--principal-->
     <main>
-        <section>
-            <p>[IMAGEM] [IMAGEM] [IMAGEM] <br> [TEXTO] [TEXTO] [TEXTO]</p>
+        <section class="principal">
+
         </section>
     </main>
+    <!--principal-->
     <footer>
-        <p>&copy; Site feito pela equipe de programação do segundo ano T.I</p>
+        <!--Social Media-->
+        <div class="Social Icons">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <!--Social Media-->
     </footer>
 </body>
 </html>
