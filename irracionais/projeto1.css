@@ -59,6 +59,23 @@
   header .menu a:hover {
       color: #690e0d;
   }
+
+  h1 {
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: xx-large;
+  }
+
+  h2 {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  p {
+    text-indent: 30px;
+    padding: 20px;
+    text-align: justify;
+  }
   
   footer {
     background-color: #d6ccc2;
