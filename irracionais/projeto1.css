@@ -18,9 +18,6 @@
   body {
       width: 100%;
       height: 100vh;
-      background-position: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Overlays/Over5.png");
-      background-size: cover;
       font-family: 'Lato', sans-serif;
       font-weight: bold;
   }
@@ -64,8 +61,8 @@
   }
   
   footer {
-      background-color: #fff;
-      padding: 1rem;
+    background-color: #d6ccc2;
+    padding: 1rem;
   }
   
   
@@ -88,5 +85,3 @@
       background: #3B5998;
       color: white;
       /*Social Media*/
-
-

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="projeto1.css">
     <link rel="stylesheet" href="login.css">
     <link rel="shortcut icon" href="Icon/brasão 32x².png" type="image/x-icon">
+    <link rel="stylesheet" href="slideimg.css">
     <title>Irracionais F.C. | Site Official</title>
 </head>
 
@@ -22,59 +23,118 @@
                 <li><a href="" class="School">Escola</a></li>
                 <li><a href="" class="Shop">Loja</a></li>
                 <li><a href="" class="contato">Contato</a></li>
-                 <button onclick="document.getElementById('id01').style.display='inline-block'" style="width:auto;">Login</button>
-
-    <div id="id01" class="modal">
-  
-    <form class="modal-content animate" action="/action_page.php" method="post">
-        <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="fotomanha.png" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-        <label for="uname"><b>Nome de Usuário</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-
-        <label for="psw"><b>Senha</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
-        
-        <button type="submit">Login</button>
-        <label>
-            <input type="checkbox" checked="checked" name="remember"> Lembre-me
-        </label>
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-        <span class="psw">Esqueceu <a href="#">sua senha?</a></span>
-        </div>
-    </form>
-    </div>
             </ul>
+            <button onclick="document.getElementById('id01').style.display='inline-block'" style="width:auto;">Login</button>
+            <div id="id01" class="modal">
+  
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                 </div>
+
+                <div class="container">
+                    <label for="uname"><b>Nome de Usuário</b></label>
+                    <input type="text" placeholder="Coloque seu nome de usuário" name="uname" required>
+
+                    <label for="psw"><b>Senha</b></label>
+                    <input type="password" placeholder="Coloque sua senha" name="psw" required>
+        
+                    <button type="submit">Login</button>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembre-me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                    <span class="psw">Esqueceu <a href="#">sua senha?</a></span>
+                </div>
+                </form>
+            </div>
         </nav>
-   
-
     <script>
-    // Get the modal
-    var modal = document.getElementById('id01');
+        // Get the modal
+        var modal = document.getElementById('id01');
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
             modal.style.display = "none";
+            }
         }
-    }
     </script>
     </header>
-    <!--menu-->
-    <!--principal-->
-    <main>
-        <section class="principal">
 
+    <main>
+         <!-- Slideshow container -->
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+  
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img2.jpg" alt="imagem1" style="width: 100%;">
+                <div class="text">Caption Two</div>
+            </div>
+  
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+  
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <section>
+            <h1>
+                Quem somos ?
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium harum dolores voluptatibus aliquid quo pariatur quas mollitia alias, iste omnis earum aspernatur corporis odit temporibus minus molestiae vero libero dolore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quis unde praesentium cum error ratione numquam! Provident explicabo, expedita magnam quis ipsa maiores culpa dolore commodi? Eligendi repudiandae facere nostrum?
+            </p>
         </section>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
     </main>
-    <!--principal-->
+
     <footer>
         <!--Social Media-->
         <div class="Social Icons">
