@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+div#imgn {
+    background-color: blue;
+    padding: 50px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
