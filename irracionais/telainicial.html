@@ -68,19 +68,19 @@
          <!-- Slideshow container -->
         <div class="slideshow-container">
             <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
+            <div class="meuslide fade">
                 <div class="numbertext">1 / 3</div>
                 <img src="imagens/img1.jpg" style="width:100%">
                 <div class="text">Bandeira Do Time</div>
             </div>
   
-            <div class="mySlides fade">
+            <div class="meuslide fade">
                 <div class="numbertext">2 / 3</div>
                 <img src="imagens/img2.jpg" alt="imagem1" style="width: 100%;">
                 <div class="text">Nossa Seleção</div>
             </div>
   
-            <div class="mySlides fade">
+            <div class="meuslide fade">
                 <div class="numbertext">3 / 3</div>
                 <img src="imagens/img3.jpg" style="width:100%">
                 <div class="text">Nossos Jogos</div>
@@ -106,7 +106,7 @@
 
             function showSlides(n) {
                 let i;
-                let slides = document.getElementsByClassName("mySlides");
+                let slides = document.getElementsByClassName("meuslide");
                 let dots = document.getElementsByClassName("dot");
                 if (n > slides.length) {slideIndex = 1}
                 if (n < 1) {slideIndex = slides.length}
@@ -141,23 +141,32 @@
                 Os 10 atletas que compôem o nosso time, são: Pedro Guedes (o nosso camisa 10), Guilherme Fuentes, Arthur Rabello, Alexandre, Gustavo Santiado, Eduardo Reis, João Paulo, Gustavo Melo, Felipe e Achiles. Com os titulares sendo Guedes, Alexandre, Achiles, Felipe e Melo, e o resto ficando como reserva. Mas em todos os jogos todos os jogares terão a oportunidade de jogar. Independente do resultado ou da habilidade de nossos os jogares, todos são bons e muito capazes de fazerem parte de uma partida
             </p>
         </section>
-        <section id="noticias">
-            <h1>
-                +NOTÍCIAS
-            </h1>
-            <div id="imgn">
-                <p>[IMG]</p>
-            </div>
-            <div id="imgn">
-                <p>[IMG]</p>
-            </div>
-            <div id="imgn">
-                <p>[IMG]</p>
-            </div>
-            <div id="imgn">
-                <p>[IMG]</p>
-            </div>
+        <section id="noticia">
+            <h1>+NOTÍCIAS</h1>
+            <img class="mySlides" src="imagens/img1.jpg" style="width:100%">
+            <img class="mySlides" src="imagens/img2.jpg" style="width:100%">
+            <img class="mySlides" src="imagens/img3.jpg" style="width:100%">
+
+            <!--newslatter-->
+            <h2>NEWSLATTER <input type="text" name="texo" id="txte" placeholder="E-mail"> <input type="button" value="Enviar"></h2>
         </section>
+        <script>
+            // Automatic Slideshow - change image every 3 seconds
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 2000);
+            }
+        </script>
     </main>
 
     <footer>
