@@ -4,8 +4,23 @@
       font-family: 'Lato', sans-serif;
       src: url(https://fonts.google.com/specimen/Lato);
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
   
-  
+  :root {
+    --cor-destaque: #F2A03D;
+    --cor-titulos: #F2811D;
+    --cor-subtitulos: #F25430;
+    --cor0: #F2F2F2;
+    --cor1: #0D0D0D;
+
+    --fonte-destque: 'Bebas Neue', cursive;
+    --fonte-paragrafo: 'Oswald' sans-serif;
+
+  }
+
   /*Corpo*/
   
   * {
@@ -39,7 +54,7 @@
       flex-wrap: wrap;
       justify-content: last baseline;
       padding: 20px;
-      background-color: #d6ccc2;
+      background-color: rgb(77, 77, 77);
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
   }
@@ -49,7 +64,7 @@
   }
   
   header .menu a {
-      color: #000;
+      color: var(--cor0);
       padding: 8px 12px;
       border-radius: 3px;
       transition: 200ms;
@@ -66,6 +81,20 @@
     font-size: xx-large;
   }
 
+  section > h1 {
+    font-family: var(--fonte-destque);
+    color: var(--cor-subtitulos);
+  }
+
+  section > h2 {
+    color: var(--cor-destaque);
+    font-family: var(--fonte-destque);
+  }
+
+  section > p {
+    font-family: 'Oswald', sans-serif;
+  }
+
   h2 {
     padding-top: 10px;
     padding-left: 20px;
@@ -80,6 +109,21 @@
   footer {
     background-color: #d6ccc2;
     padding: 1rem;
+  }
+
+  #txte {
+    border: 1px solid black;
+  }
+
+  #buttonnl {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 5px;
+  }
+
+  #buttonnl:hover {
+    background-color: rgb(83, 83, 83);
   }
   
   
